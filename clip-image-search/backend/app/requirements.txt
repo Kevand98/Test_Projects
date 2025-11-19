@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pymongo
+pillow
+numpy
+torch
+torchvision
+transformers
+python-multipart
+tqdm

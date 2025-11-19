@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Visual Search</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="background-effect"></div>
+
+    <div class="container">
+      <h1>Visual Intelligence</h1>
+      <p class="subtitle">Search by Text, Image, or Both</p>
+
+      <div class="search-area">
+        <div id="dropZone" class="image-input-area">
+            <div id="previewContainer" class="hidden">
+                <img id="imgPreview" src="" alt="Preview">
+                <button id="clearImgBtn" title="Remove Image">&times;</button>
+            </div>
+            <div id="uploadPrompt">
+                <i class="fa-solid fa-image"></i>
+                <span>Drag image here</span>
+            </div>
+            <input id="searchFile" type="file" accept="image/*" hidden>
+        </div>
+
+        <div class="text-input-wrapper">
+            <input id="query" type="text" placeholder="Describe what you are looking for..." />
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+
+      <div class="admin-controls">
+          <button id="indexBtn" class="secondary-btn">Re-Index DB</button>
+      </div>
+
+      <div id="results" class="grid"></div>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

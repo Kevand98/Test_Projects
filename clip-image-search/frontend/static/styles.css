@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+.background-effect {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08), transparent 25%),
+              radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.08), transparent 25%);
+  z-index: -1;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+  
+  background: linear-gradient(to right, #38bdf8, #a855f7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; 
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.search-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .search-area {
+        flex-direction: row;
+        align-items: center;
+        padding: 8px;
+    }
+}
+
+
+.image-input-area {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border: 2px dashed #475569;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #94a3b8;
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .image-input-area {
+        width: 80px;
+        height: 60px;
+        flex-shrink: 0;
+    }
+}
+
+.image-input-area:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.05);
+}
+
+#uploadPrompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+    gap: 4px;
+}
+#uploadPrompt i { font-size: 1.2rem; }
+
+
+#previewContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#previewContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#clearImgBtn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text-input-wrapper {
+    flex-grow: 1;
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    outline: none;
+    padding: 0 15px;
+}
+
+#searchBtn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    width: 60px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#searchBtn:hover { background: #2563eb; }
+
+.hidden { display: none !important; }
+
+.admin-controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #334155;
+    color: #64748b;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.secondary-btn:hover { color: #94a3b8; border-color: #475569; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+}
+.card {
+    background: #1e293b;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    border: 1px solid #334155;
+}
+.card:hover { transform: translateY(-5px); border-color: #38bdf8; }
+.card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.meta { padding: 12px; font-size: 0.85rem; color: #94a3b8; background: #0f172a; }
+.score { float: right; color: #38bdf8; font-weight: bold; }
