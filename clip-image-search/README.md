@@ -1,15 +1,8 @@
 # CLIP Hybrid Image Search Engine
 
-This project demonstrates a powerful, semantic image search engine built using OpenAI's **CLIP model** and **FastAPI**. The application allows users to search an image database based on text (e.g., "a happy dog"), an image, or a combination of both.
+This project demonstrates a simple, semantic image search engine built using OpenAI's **CLIP model** and **FastAPI**. The application allows users to search an image database based on text (e.g., "a happy dog"), an image, or a combination of both.
 
 The entire project is containerized using Docker Compose for easy deployment and management.
-
-## Key Features
-
-* **Hybrid Search:** Supports Text-to-Image, Image-to-Image, and combined (Hybrid) searching for refined results.
-* **Zero-Shot Learning:** The model can search for concepts it was not explicitly trained on (e.g., "a feeling of joy").
-* **High Performance:** Utilizes **In-Memory Vector Search** (NumPy matrices) for near-instantaneous search results.
-* **Containerized:** Easily deployable locally using Docker Compose.
 
 ## Technologies Used
 
@@ -46,3 +39,6 @@ Run this command from the project root directory. It builds the necessary Docker
 
 ```bash
 docker-compose up --build -d
+
+```
+Then open up `localhost` in your browser
